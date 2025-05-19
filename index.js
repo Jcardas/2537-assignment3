@@ -100,6 +100,22 @@ function setup() {
     else if (selectedDifficulty === "hard") numOfPokemon = 10;
   });
 
+  // On page load, apply dark mode if previously set
+  if (localStorage.getItem("dark_mode") === "true") {
+    $("body").addClass("dark-mode");
+    $("#dark_mode").prop("checked", true);
+  }
+
+  $("#dark_mode").on("change", function () {
+    if ($(this).is(":checked")) {
+      $("body").addClass("dark-mode");
+      localStorage.setItem("dark_mode", "true");
+    } else {
+      $("body").removeClass("dark-mode");
+      localStorage.setItem("dark_mode", "false");
+    }
+  });
+
   // Start Game button
   let gameStarted = false;
   $("#start_game").on("click", async function () {

@@ -142,6 +142,30 @@ img {
   background: #e0e0e0;
 }
 
+#difficulty_selector button.selected {
+  background: #a1a1a1;
+  color: #6b81fa;
+  border-color: #aaa;
+  cursor: default;
+}
+
 #dark_mode_toggle{
   margin-top: 20px;
+}
+
+body.dark-mode {
+  background: #181818;
+  color: #f0f0f0;
+}
+
+body.dark-mode #menu,
+body.dark-mode #game_stats {
+  background: #232323;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .popup {
+  background: #232323;
+  color: #f0f0f0;
 }
