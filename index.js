@@ -185,6 +185,8 @@ function startGame(numOfPokemon) {
           return img.id.split('_')[0];
         }
         if (getBaseId(firstCard) !== getBaseId(shinyImg)) {
+          // Flip the shiny card (since it's the second card)
+          shinyCard.addClass("flip");
           lockBoard = true;
           setTimeout(() => {
             unmatched.not(".matched").removeClass("flip");
