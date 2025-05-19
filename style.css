@@ -1,0 +1,147 @@
+body {
+  font-family: 'inter', sans-serif;
+  margin: 0px;
+}
+
+.game_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#game_grid {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  display: grid;
+  /* Default to easy mode: 3 columns, 2 rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 0 0;
+}
+
+/* Medium mode: 4 columns, 3 rows */
+#game_grid.medium {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* Hard mode: 5 columns, 4 rows */
+#game_grid.hard {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  transition: transform 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+img {
+  width: 100%
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+.matched {
+  cursor: not-allowed;
+}
+
+.popup {
+  font-size: x-large;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#game_stats {
+  width: 600px;
+  margin: 30px auto 0 auto;
+  font-size: 1.2em;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.game_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#menu {
+  width: 600px;
+  margin: 30px auto 0 auto;
+  font-size: 1.2em;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#difficulty_selector h2 {
+  margin-top: 0;
+}
+
+#difficulty_selector button,
+#game_controls button {
+  margin: 0 10px;
+  padding: 8px 18px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#difficulty_selector button:hover,
+#game_controls button:hover {
+  background: #e0e0e0;
+}
+
+#dark_mode_toggle{
+  margin-top: 20px;
+}

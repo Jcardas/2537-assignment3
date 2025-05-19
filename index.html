@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+
+  <!-- When the game starts, display a difficulty selector with Easy, Medium, Hard -->
+  <div class="container">
+    <div id="menu">
+      <div id="difficulty_selector">
+        <h2>Select Difficulty</h2>
+        <button id="easy">Easy</button>
+        <button id="medium">Medium</button>
+        <button id="hard">Hard</button>
+      </div>
+
+      <!-- Div with start and reset button -->
+      <div id="game_controls">
+        <button id="start_game">Start Game</button>
+        <button id="reset_game">Reset Game</button>
+        <div id="dark_mode_toggle">
+          <label for="dark_mode">Dark Mode</label>
+          <input type="checkbox" id="dark_mode">
+        </div>
+      </div>
+    </div>
+
+    <div class="game_container">
+      <div id="game_stats">
+        <span id="click_count">Clicks: 0</span> |
+        <span id="pairs_left">Pairs Left: -</span> |
+        <span id="pairs_matched">Pairs Matched: 0</span> |
+        <span id="total_pairs">Total Pairs: -</span>
+      </div>
+
+      <!-- Game timer -->
+      <div id="game_timer">
+        <span id="timer">Time: 0:00</span>
+      </div>
+
+      <div id="game_grid">
+
+        <!-- Card Template  -->
+        <!-- <div class="card">
+          <img id="img1" class="front_face" src="001.png" alt="">
+          <img class="back_face" src="back.webp" alt="">
+        </div> -->
+
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
