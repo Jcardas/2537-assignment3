@@ -1,6 +1,21 @@
 body {
   font-family: 'inter', sans-serif;
+  background: url('backdrop.jpg') no-repeat center center fixed;
+  background-size: cover;
   margin: 0px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  background-size: cover;
+  filter: blur(6px);
+  pointer-events: none;
 }
 
 .game_container{
@@ -154,7 +169,7 @@ img {
 }
 
 body.dark-mode {
-  background: #181818;
+  background: url('dark_bg.png') no-repeat center center fixed;
   color: #f0f0f0;
 }
 
@@ -168,4 +183,8 @@ body.dark-mode #game_stats {
 body.dark-mode .popup {
   background: #232323;
   color: #f0f0f0;
+}
+
+#timer {
+  color: white;
 }
